@@ -1,0 +1,26 @@
+{
+ "manifest_version": 2,
+ "name": "Auto Check Mail for Imported Accounts on GMail",
+ "description": "Automatically clicks the sync now button so you don't have to.",
+ "version": "0.0.2",
+ "author": "Darren Kearney",
+
+ "browser_action": {
+   "default_icon": "images/icon.png",
+   "default_popup": "html/popup.html",
+   "default_title": "Automatic 'Check Mail Now' for Imported Accounts on GMail"
+ },
+
+ "content_scripts": [
+  {
+    "matches": [
+      "https://mail.google.com/mail/*"
+    ],
+    "js": ["scripts/content_gmail.js"]
+  }
+ ],
+
+ "permissions": [
+   "activeTab"
+ ]
+}
